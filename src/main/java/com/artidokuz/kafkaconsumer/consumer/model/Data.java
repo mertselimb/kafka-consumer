@@ -23,5 +23,9 @@ public class Data {
         }
         return "False";
     }
+
+    public String toString(){
+        return this.timeStamp + " : " + this.logLevel + " : " + this.cityName + " : " + this.logDetail;
+    }
 }
 
