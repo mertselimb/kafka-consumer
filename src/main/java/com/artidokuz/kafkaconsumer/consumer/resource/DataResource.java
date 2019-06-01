@@ -5,13 +5,11 @@ import com.artidokuz.kafkaconsumer.consumer.repository.DataRepository;
 import com.artidokuz.kafkaconsumer.consumer.repository.RuntimeList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
 public class DataResource {
 
     @Autowired
@@ -20,16 +18,16 @@ public class DataResource {
     @Autowired
     private DataRepository dataRepository;
 
-
     @GetMapping("/all")
     public List<Data> getAll() {
-        System.out.println(runtimeList.getList().toString());
+        System.out.println(runtimeList.getMap().toString());
         return dataRepository.findAll();
     }
 
-
     @GetMapping("/list")
     public String getList() {
-        return runtimeList.getList().toString();
+        return runtimeList.toString();
     }
+
 }
+
