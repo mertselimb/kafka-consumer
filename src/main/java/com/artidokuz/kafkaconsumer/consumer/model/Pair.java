@@ -27,6 +27,6 @@ public class Pair {
 
     @Override
     public String toString() {
-        return "\"" + this.str0 + "\" : \"" + this.str1 + "\"" ;
+        return "[\"" + this.str0 + "\",\"" + this.str1 + "\"]" ;
     }
 }

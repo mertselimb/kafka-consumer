@@ -30,7 +30,7 @@ public class RuntimeList {
                 str = str + "," + pair.toString();
             }
         }
-        return "{" + str + "}" ;
+        return "{\"arr\":[" + str + "]}" ;
     }
 }
 
